@@ -1,4 +1,4 @@
-import { metrics } from './playground/metrics.mjs'
+import { summary } from './playground/summary.mjs'
 
 const SAMPLE_METRICS = `
 ## Must Read
@@ -33,7 +33,7 @@ const SAMPLE_METRICS = `
 `
 
 async function run() {
-  const response = await metrics(SAMPLE_METRICS)
+  const response = await summary(SAMPLE_METRICS)
 
   console.log(response)
 }
