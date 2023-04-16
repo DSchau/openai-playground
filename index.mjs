@@ -1,8 +1,7 @@
 import { metrics } from './experiments/metrics.mjs'
 
-async function run() {
-  const response = await metrics(`
-  ## Must Read
+const SAMPLE_METRICS = `
+## Must Read
 
 - **DevCycle Migration**
     - The Frontend and Backend migrations are progressing well. The groundwork has been laid and the Frontend flag evaluations will soon start defaulting to DevCycle and the BitBalloon evals are ready for teams to take on, convert, and test. The ADN pod is holding off on their migration until DevCycle delivers a more performant Go SDK. Please read about the [State of the World](https://www.notion.so/DevCycle-Migration-b64ee23fc40b449c97f661520f6f06b6) in Notion.
@@ -25,13 +24,16 @@ async function run() {
 
 ## **Upcoming and Recent customer-facing updates and changes**
 
-- Manscaped is not ready to work with Netlify to prove out the HUMAN bot protection capability. There are no other apparent customer opportunities at this point.
-- ODB Refresh Hook beta underway with customer Tekton-Inc.
+- Big Customer X is not ready to work with This Company to prove out the HUMAN bot protection capability. There are no other apparent customer opportunities at this point.
+- ODB Refresh Hook beta underway with customer Customer Z.
 
 ## **Next week's highlights**
 
-- More details are always available to read [here](https://www.notion.so/Pillar-Roadmap-Active-Projects-d9bb0080481e4b69a75d08a3ff80b6a3)
-  `)
+- More details are always available to read [here](https://www.notion.so/Pillar-Roadmap-Active-Projects-something)
+`
+
+async function run() {
+  const response = await metrics(SAMPLE_METRICS)
 
   console.log(response)
 }
