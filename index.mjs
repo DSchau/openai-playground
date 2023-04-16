@@ -1,4 +1,4 @@
-import { metrics } from './experiments/metrics.mjs'
+import { metrics } from './playground/metrics.mjs'
 
 const SAMPLE_METRICS = `
 ## Must Read
